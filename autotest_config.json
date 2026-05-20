@@ -25,7 +25,7 @@
       "_comment_transitive_count": "Main-group transitives: certifi, chardet, idna, urllib3 via requests. gte allows for resolver-version drift.",
 
       "direct_dependencies_names_list": {
-        "contains": ["requests-2.34.2-py3-none-any.whl", "click-8.4.0-py3-none-any.whl""]
+        "contains": ["requests-2.34.2-py3-none-any.whl", "click-8.4.0-py3-none-any.whl"]
       },
       "transitive_dependencies_names_list": {
         "nin": ["pytest", "pytest-cov", "hypothesis", "faker", "iniconfig", "pluggy", "python-dateutil"]
