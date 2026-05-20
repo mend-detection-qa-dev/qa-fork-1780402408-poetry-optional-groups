@@ -1,0 +1,29 @@
+{
+  "repoUrl": "https://github.com/mend-detection-qa/poetry-optional-groups",
+  "tests": [
+    {
+      "check_name": "direct_dependencies_count",
+      "check_type": "STRICT",
+      "expected_value": 3,
+      "description": "Main group only: requests, click, pyyaml. Dev+test groups are optional=true and must be excluded."
+    },
+    {
+      "check_name": "direct_dependencies_names_list",
+      "check_type": "STRICT",
+      "expected_value": ["requests", "click", "pyyaml"],
+      "description": "Only production-group deps in tree"
+    },
+    {
+      "check_name": "excluded_dependencies_names_list",
+      "check_type": "STRICT",
+      "expected_value": ["pytest", "pytest-cov", "hypothesis", "faker"],
+      "description": "Optional group packages must NOT appear in the production dep tree"
+    },
+    {
+      "check_name": "total_dependencies_count",
+      "check_type": "FLEXIBLE",
+      "expected_value": 7,
+      "description": "Production transitives: certifi, chardet, idna, urllib3 via requests"
+    }
+  ]
+}
