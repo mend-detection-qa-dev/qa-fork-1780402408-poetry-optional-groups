@@ -17,6 +17,7 @@
       "check_dependency_tree_detection_status": true,
       "check_update_request_sca_results": true,
 
+      "check_system_paths": true,
       "expected_total_dependencies_number": {"gte": 5},
       "expected_direct_dependencies_number": {"eq": 3},
       "_comment_direct_count": "eq=3 is the load-bearing assertion that optional groups (dev, test) were excluded — if Mend wrongly included them, direct count would be 7.",
